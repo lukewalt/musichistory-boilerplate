@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music History</title>
-</head>
-<body>
-  <nav id="top-nav">
-    <ul>
-      <li><a href="#">View Music</a><li>
-      <li><a href="#">Add Music</a><li>
-      <li><a href="#">Profile</a><li>  
-    </ul>
-  </nav>
-  <div id="filter">
+  <head>
+    <meta charset="utf-8">
+    <title>Music History</title>
+  </head>
+  <body>
 
-  </div>
-  <div id="content">
+    <nav id="top-nav">
+      <ul>
+        <li><a href="#">View Music</a><li>
+        <li><a href="#">Add Music</a><li>
+        <li><a href="#">Profile</a><li>
+      </ul>
+    </nav>
+    <div id="filter">
 
-  </div>
-</body>
+      <label for="song-length">Song length:</label>
+      <input type="range" id="song-length" name="song-length-slider">
+
+      <label for="artist">Artist:</label>
+      <select id="artist" name="artist-select">
+        <option value="tycho">Tycho</option>
+        <option value="toro-y-moi">Toro Y Moi</option>
+        <option value="el-ten-eleven">El Ten Eleven</option>
+        <option value="a-tribe-called-quest">A Tribe Called Quest</option>
+	  	</select>
+
+      <label for="album">Album:</label>
+      <select id="album" name="album-select">
+        <option value="a-walk">A Walk</option>
+        <option value="what-for?">What For?</option>
+        <option value="el-ten-eleven-selftitle">El Ten Eleven (2005)</option>
+        <option value="the-low-end-theory">The Low End Theory</option>
+	  	</select>
+
+      <label>Genre:</label>
+      <input type="checkbox" id="hip-hop" value="genre-hip-hop" name="genre-hip-hop"><label for="hip-hop">Hip Hop</label>
+      <input type="checkbox" id="electronic" value="genre-electronic" name="genre-electronic"><label for="electronic">Electronic</label>
+      <input type="checkbox" id="alternative" value="genre-alternative" name="genre-alternative"><label for="alternative">Alternative</label>
+      <input type="checkbox" id="jazz" value="genre-jazz" name="genre-jazz"><label for="jazz">Jazz</label>
+
+      <button type="button">Filter</button>
+    </div>
+
+    <div id="content">
+
+    </div>
+
+  </body>
 </html>

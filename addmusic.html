@@ -14,28 +14,24 @@
           <li><a href="addmusic.html">Add Music</a><li>
           <li><a href="#">Profile</a><li>
         </ul>
-      </header  >
-      <div class="content">
-
-        <article id="songs">
-          <h2>Song Name</h2>
-            <p>Artist Name</p>
-            <p>Album Name</p>
-            <p>Genre</p>
-          <h2>Song Name</h2>
-            <p>Artist Name</p>
-            <p>Album Name</p>
-            <p>Genre</p>
-          <h2>Song Name</h2>
-            <p>Artist Name</p>
-            <p>Album Name</p>
-            <p>Genre</p>
-          <h2>Song Name</h2>
-            <p>Artist Name</p>
-            <p>Album Name</p>
-            <p>Genre</p>
-        </article>
+      </header>
+      <div id="entry-field">
+        <div class="search-box">
+          <label for="song-name">Song Name:</label>
+          <input type="text" id="song-name" name="song">
+        </div>
+        <div class="search-box">
+          <label for="artist">Artist:</label>
+          <input type="text" id="artist" name="artist">
+        </div>
+        <div class="search-box">
+          <label for="album">Album:</label>
+          <input type="text" id="album" name="album">
+        </div>
       </div>
+      <section id="add-sect">
+        <button type="button" id="add-music">Add</button>
+      </section>
     </div>
   </body>
 </html>

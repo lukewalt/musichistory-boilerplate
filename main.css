@@ -1,5 +1,5 @@
 
-/*<-------------------   Main Style  -------------------->*/
+/*<-------------   Main Style  -------------------->*/
 
 * {
   font-family: Arial, sans-serif;
@@ -104,8 +104,46 @@ h2 {
 }
 
 
+/*<------------  Add Music Page  -------------------->*/
 
-/*<-------------------   Media Queries  -------------------->*/
+
+
+#entry-field {
+  display: flex;
+  flex-flow: column;
+  padding: 5% 10% 1%;
+}
+
+.search-box {
+  padding: 1% 23%;
+  margin: .5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.search-box > input {
+  border: 2px solid black;
+  width: 23em;
+  height: 1.5em;
+}
+
+#add-sect {
+  text-align: center;
+}
+
+#add-music {
+  height: 2%;
+  width: 13%;
+  padding: .4%;
+  font-size: 1em;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: lightgrey ;
+}
+
+
+/*<------------   Media Queries  -------------------->*/
 
 /*@media all and (min-width: 845px) {
 

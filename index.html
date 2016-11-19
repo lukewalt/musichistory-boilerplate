@@ -18,7 +18,7 @@
       <div class="content">
         <aside class="filter">
 
-          <label for="song-length">Song length:</label>
+          <label for="song-length">Song Length:</label>
           <input type="range" id="song-length" name="song-length-slider">
 
           <label for="artist">Artist:</label>
@@ -38,14 +38,22 @@
             <option value="the-low-end-theory">The Low End Theory</option>
             <option value="day-breaks">Day Breaks</option>
     	  	</select>
-
-          <label id="genre-box">Genre:</label>
-          <input type="checkbox" id="hip-hop" value="genre-hip-hop" name="genre-hip-hop"><label for="hip-hop">Hip Hop</label>
-          <input type="checkbox" id="electronic" value="genre-electronic" name="genre-electronic"><label for="electronic">Electronic</label>
-          <input type="checkbox" id="alternative" value="genre-alternative" name="genre-alternative"><label for="alternative">Alternative</label>
-          <input type="checkbox" id="jazz" value="genre-jazz" name="genre-jazz"><label for="jazz">Jazz</label>
-
-          <button type="button">Filter</button>
+          <label>Genre:</label><br>
+          <div id="genre-box">
+            <span>
+              <input type="checkbox" id="folk" value="genre-folk" name="genre-folk"><label for="jazz">Folk</label>
+              <input type="checkbox" id="hip-hop" value="genre-hip-hop" name="genre-hip-hop"><label for="hip-hop">Hip Hop</label>
+            </span>
+            <span>
+              <input type="checkbox" id="blues" value="genre-blues" name="genre-blues"><label for="blues">Blues</label>
+              <input type="checkbox" id="jazz" value="genre-jazz" name="genre-jazz"><label for="jazz">Jazz</label>
+            </span>
+            <span>
+              <input type="checkbox" id="electronic" value="genre-electronic" name="genre-electronic"><label for="electronic">Electr</label>
+              <input type="checkbox" id="rock" value="genre-rock" name="genre-rock"><label for="rock">Rock</label>
+              </span>
+          </div>
+        <button type="button">Filter</button>
         </aside>
 
         <article id="songs">

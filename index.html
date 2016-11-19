@@ -4,49 +4,69 @@
   <head>
     <meta charset="utf-8">
     <title>Music History</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
+    <div id="wrapper">
+      <header id="top-nav">
+        <ul>
+          <li><a href="#">View Music</a><li>
+          <li><a href="#">Add Music</a><li>
+          <li><a href="#">Profile</a><li>
+        </ul>
+      </header  >
+      <div class="content">
+        <aside class="filter">
 
-    <nav id="top-nav">
-      <ul>
-        <li><a href="#">View Music</a><li>
-        <li><a href="#">Add Music</a><li>
-        <li><a href="#">Profile</a><li>
-      </ul>
-    </nav>
-    <div id="filter">
+          <label for="song-length">Song length:</label>
+          <input type="range" id="song-length" name="song-length-slider">
 
-      <label for="song-length">Song length:</label>
-      <input type="range" id="song-length" name="song-length-slider">
+          <label for="artist">Artist:</label>
+          <select id="artist" name="artist-select">
+            <option value="tycho">Tycho</option>
+            <option value="norah-jones">Norah Jones</option>
+            <option value="toro-y-moi">Toro Y Moi</option>
+            <option value="el-ten-eleven">El Ten Eleven</option>
+            <option value="a-tribe-called-quest">A Tribe Called Quest</option>
+    	  	</select>
 
-      <label for="artist">Artist:</label>
-      <select id="artist" name="artist-select">
-        <option value="tycho">Tycho</option>
-        <option value="toro-y-moi">Toro Y Moi</option>
-        <option value="el-ten-eleven">El Ten Eleven</option>
-        <option value="a-tribe-called-quest">A Tribe Called Quest</option>
-	  	</select>
+          <label for="album">Album:</label>
+          <select id="album" name="album-select">
+            <option value="a-walk">A Walk</option>
+            <option value="what-for?">What For?</option>
+            <option value="el-ten-eleven-selftitle">El Ten Eleven (2005)</option>
+            <option value="the-low-end-theory">The Low End Theory</option>
+            <option value="day-breaks">Day Breaks</option>
+    	  	</select>
 
-      <label for="album">Album:</label>
-      <select id="album" name="album-select">
-        <option value="a-walk">A Walk</option>
-        <option value="what-for?">What For?</option>
-        <option value="el-ten-eleven-selftitle">El Ten Eleven (2005)</option>
-        <option value="the-low-end-theory">The Low End Theory</option>
-	  	</select>
+          <label id="genre-box">Genre:</label>
+          <input type="checkbox" id="hip-hop" value="genre-hip-hop" name="genre-hip-hop"><label for="hip-hop">Hip Hop</label>
+          <input type="checkbox" id="electronic" value="genre-electronic" name="genre-electronic"><label for="electronic">Electronic</label>
+          <input type="checkbox" id="alternative" value="genre-alternative" name="genre-alternative"><label for="alternative">Alternative</label>
+          <input type="checkbox" id="jazz" value="genre-jazz" name="genre-jazz"><label for="jazz">Jazz</label>
 
-      <label>Genre:</label>
-      <input type="checkbox" id="hip-hop" value="genre-hip-hop" name="genre-hip-hop"><label for="hip-hop">Hip Hop</label>
-      <input type="checkbox" id="electronic" value="genre-electronic" name="genre-electronic"><label for="electronic">Electronic</label>
-      <input type="checkbox" id="alternative" value="genre-alternative" name="genre-alternative"><label for="alternative">Alternative</label>
-      <input type="checkbox" id="jazz" value="genre-jazz" name="genre-jazz"><label for="jazz">Jazz</label>
+          <button type="button">Filter</button>
+        </aside>
 
-      <button type="button">Filter</button>
+        <article id="songs">
+          <h2>Song Name</h2>
+            <p>Artist Name</p>
+            <p>Album Name</p>
+            <p>Genre</p>
+          <h2>Song Name</h2>
+            <p>Artist Name</p>
+            <p>Album Name</p>
+            <p>Genre</p>
+          <h2>Song Name</h2>
+            <p>Artist Name</p>
+            <p>Album Name</p>
+            <p>Genre</p>
+          <h2>Song Name</h2>
+            <p>Artist Name</p>
+            <p>Album Name</p>
+            <p>Genre</p>
+        </article>
+      </div>
     </div>
-
-    <div id="content">
-
-    </div>
-
   </body>
 </html>

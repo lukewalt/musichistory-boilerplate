@@ -1,0 +1,88 @@
+
+/*<-------------------   Main Style  -------------------->*/
+
+#wrapper {
+  display: block;
+}
+
+#wrapper > * {
+  margin: .3%;
+}
+
+#top-nav {
+  background-color: #FFB4B0;
+  border: 2px solid black;
+  flex-grow: 1 100%;
+}
+
+#top-nav ul {
+  justify-content: flex-start;
+}
+
+#top-nav ul li {
+  display: inline-flex;
+  margin: 0% .5% 0% .5%;
+}
+
+.content {
+  display: inline-flex;
+  flex-grow: 1%;
+  margin: 0px;
+}
+
+.content > * {
+  margin: 1%;
+}
+
+.filter {
+  background-color: #4DD7FA;
+  border: 2px solid black;
+  width: 20%;
+  margin: 0px 1% 0px 0px;
+  padding: 2%;
+}
+
+.filter > * {
+  display: inline-block;
+  padding: 5%;
+  align-items: center;
+}
+
+.filter > button {
+  margin: auto;
+  width: 55%;
+
+}
+
+#genre-box > input {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#songs {
+  background-color: #FEFAC0;
+  border: 2px solid black;
+  text-align: left;
+  width: 80%;
+  margin: 0px;
+  padding: 2%;
+}
+
+#songs > p {
+  display: inline;
+  padding: 0 4% 0 4%;
+}
+
+h2 {
+  margin-top: 1%;
+}

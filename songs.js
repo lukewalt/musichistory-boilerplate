@@ -1,3 +1,7 @@
+//capture elements from the DOM
+var songTitle = document.querySelector('.songTitle');
+var artist = document.querySelector('.artist');
+var album = document.querySelector('.songTitle');
 
 
 var songs = [];
@@ -11,4 +15,11 @@ songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little
 // placed a new song at the beginning and end of the starter array
 songs.unshift("Buffalo > by Toro y Mio on the album What For?");
 songs.push("a Walk > by Tycho on the album Dive");
+console.log(songs);
+
+
+for(var i = songs.length -1; i >= 0 ; i--){
+  songs[i] = songs[i].replace(/@/, ""); 
+}
+
 console.log(songs);

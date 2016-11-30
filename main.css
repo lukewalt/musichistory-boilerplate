@@ -47,13 +47,15 @@
   width: 20%;
   margin: 0px 1% 0px 0px;
   padding: 2%;
-  text-align: left;
 }
 
 .filter > * {
   display: inline-block;
   padding: 5%;
-  align-items: center;
+}
+
+#wrapper > div > aside > label:nth-child(1) {
+  text-align: center;
 }
 
 #genre-box {
@@ -141,14 +143,3 @@ h2 {
   border-radius: 5px;
   background-color: lightgrey ;
 }
-
-
-/*<------------   Media Queries  -------------------->*/
-
-/*@media all and (min-width: 845px) {
-
-}
-
-@media all and (min-width: 1209px) {
-
-}*/

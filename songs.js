@@ -44,9 +44,11 @@ var library = {
 
 for (var i = 0; i < cleanedArray.length; i++) {
     var songInfoSplit = cleanedArray[i].split("-");
-    console.log(songInfoSplit);
-    // library.songs = (cleanedArray[i])
-
+    console.log(i + ":" + songInfoSplit);
+    library.songs.push(songInfoSplit[0]);
+    library.artist.push(songInfoSplit[1]);
+    library.album.push(songInfoSplit[2]);
+    library.genre.push(songInfoSplit[3]);
 }
 
-// console.log(library);
+ console.log(library);

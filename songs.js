@@ -35,6 +35,7 @@ for(var i = songs.length -1; i >= 0 ; i--){
 }
 console.log(cleanedArray);
 
+//created empty object to store new values in the form of arrays
 var library = {
     songs: [],
     artist: [],
@@ -42,13 +43,16 @@ var library = {
     genre: []
 };
 
+//used for loop to create arrays of just songs, just artists, just albums, and just genres AND set those arrays as values in library object
 for (var i = 0; i < cleanedArray.length; i++) {
     var songInfoSplit = cleanedArray[i].split("-");
-    console.log(i + ":" + songInfoSplit);
+    //console.log(i + " : " + songInfoSplit);
     library.songs.push(songInfoSplit[0]);
     library.artist.push(songInfoSplit[1]);
     library.album.push(songInfoSplit[2]);
     library.genre.push(songInfoSplit[3]);
 }
-
  console.log(library);
+
+
+ 

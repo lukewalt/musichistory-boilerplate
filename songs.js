@@ -24,8 +24,8 @@ for (var i = 0; i < 1; i++) {
     songs[2] += " - Elctr"
     songs[3] += " - Rock"
     songs[4] += " - Rock"
-    songs[4] += " - Rock"
-    songs[5] += " - Elctr"
+    songs[5] += " - Rock"
+    songs[6] += " - Elctr"
 }
 
 //removed unwanted characters from each array
@@ -44,7 +44,7 @@ var library = {
 
 for (var i = 0; i < cleanedArray.length; i++) {
     var songInfoSplit = cleanedArray[i].split("-");
-    console.log(tempArray);
+    console.log(songInfoSplit);
     // library.songs = (cleanedArray[i])
 
 }

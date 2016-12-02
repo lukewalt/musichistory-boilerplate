@@ -1,8 +1,3 @@
-//capture elements from the DOM
-var songTitle = document.querySelector('.songTitle');
-var artist = document.querySelector('.artist');
-var album = document.querySelector('.songTitle');
-
 
 var songs = [];
 
@@ -35,6 +30,8 @@ for(var i = songs.length -1; i >= 0 ; i--){
 }
 console.log(cleanedArray);
 
+
+
 //created empty object to store new values in the form of arrays
 var library = {
     songs: [],
@@ -42,17 +39,43 @@ var library = {
     album: [],
     genre: []
 };
+console.log(library);
 
-//used for loop to create arrays of just songs, just artists, just albums, and just genres AND set those arrays as values in library object
-for (var i = 0; i < cleanedArray.length; i++) {
-    var songInfoSplit = cleanedArray[i].split("-");
-    //console.log(i + " : " + songInfoSplit);
-    library.songs.push(songInfoSplit[0]);
-    library.artist.push(songInfoSplit[1]);
-    library.album.push(songInfoSplit[2]);
-    library.genre.push(songInfoSplit[3]);
+
+ //capture elements from the DOM in the form of a NODE List
+ var songTitle = document.getElementsByClassName('songTitle');
+ var artistDisplay = document.getElementsByClassName('artist');
+ var albumDisplay = document.getElementsByClassName('album');
+ var genreDisplay = document.getElementsByClassName('genre');
+
+var display = function() {
+    for (var i = 0; i < cleanedArray.length; i++) {
+        var songInfoSplit = cleanedArray[i].split("-");
+        // taking split items and pushing them to arrays in library object
+        library.songs.push(songInfoSplit[0]);
+        library.artist.push(songInfoSplit[1]);
+        library.album.push(songInfoSplit[2]);
+        library.genre.push(songInfoSplit[3]);
+    }
+    console.log(library);
+    //looping throught the arrays stored as object values and setting them equal to the counter indexing each node in the Node list
+    for (var j = 0; j < library.songs.length; j++) {
+        console.log(songTitle[j]);
+        songTitle[j].innerHTML = library.songs[j];
+    }
+    for (var j = 0; j < library.artist.length; j++) {
+        console.log(artistDisplay[j])
+        artistDisplay[j].innerHTML = library.artist[j];
+    }
+    for (var j = 0; j < library.album.length; j++) {
+        console.log(albumDisplay[j])
+        albumDisplay[j].innerHTML = library.album[j];
+    }
+    for (var j = 0; j < library.genre.length; j++) {
+        console.log(genreDisplay[j])
+        genreDisplay[j].innerHTML = library.genre[j];
+    }
+
 }
- console.log(library);
 
-
- 
+display()

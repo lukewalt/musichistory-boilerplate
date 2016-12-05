@@ -63,7 +63,7 @@ var display = function() {
     //looping throught the arrays stored as object values and setting them equal to the counter indexing each node in the Node list
     for (var j = 0; j < library.songs.length; j++) {
         console.log(songTitle[j]);
-        songTitle[j].innerHTML = library.songs[j]; 
+        songTitle[j].innerHTML = library.songs[j];
     }
     for (var j = 0; j < library.artist.length; j++) {
         console.log(artistDisplay[j])

@@ -6,14 +6,12 @@
 }
 
 .container {
-    margin: 0;
+    margin: auto;
 }
 
 .navbar {
     padding: 2%;
     background-color: #FFB4B0;
-    border: 2px solid black;
-    /*margin: 0;*/
 }
 
 
@@ -23,8 +21,9 @@
 
 .filter {
   background-color: #4DD7FA;
-  border: 2px solid black;
+  border: 1px solid darkblue;
   padding: 2%;
+
 }
 
 .filter > * {
@@ -57,9 +56,10 @@
 
 #songs {
     background-color: #FEFAC0;
-    border: 2px solid black;
+    border: 2px solid gold;
     text-align: left;
     padding: 4% 2% 5% 4%;
+
 }
 
 #songs > p {

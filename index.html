@@ -8,16 +8,38 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <div id="wrapper">
-            <header class="row xs-col-12" id="top-nav">
-                <ul>
-                    <li><a href="index.html">View Music</a><li>
-                    <li><a href="addmusic.html">Add Music</a><li>
-                    <li><a href="#">Profile</a><li>
-                </ul>
-            </header>
-            <div class="content">
-                <aside class="filter">
+
+    <nav class="navbar navbar-default navbar-static-top">
+
+        <div class="nav-element col-sm-1">
+            <a class="nav-btn nav-link" href="index.html" id="home">View Music</a>
+        </div>
+
+        <div class="nav-element col-sm-1">
+            <a class="nav-btn nav-link" href="addmusic.html" id="new-movies">Add Music</a>
+        </div>
+
+        <div class=" nav-element navbar-right col-sm-1">
+            <a class="nav-btn register" href="#" data-toggle="modal" data-target="#myModal" data-whatever="register">
+                Register</a>
+                <a class="nav-btn logout navBtn" href="#">
+                    Logout
+                </a>
+            </div>
+            <div class=" nav-element navbar-right col-sm-1">
+                <a class="nav-btn login" href="#"data-toggle="modal" data-target="#myModal" data-whatever="login">
+                    Login
+                </a>
+            </div>
+
+        </nav>
+        <div class="container">
+
+
+            <!-- <div class="container"> -->
+            <div class="row">
+
+                <div class="col-md-3 filter">
 
                     <label for="song-length">Song Length:</label>
                     <input type="range" id="song-length" name="song-length-slider">
@@ -38,7 +60,7 @@
                         <option value="el-ten-eleven-selftitle">El Ten Eleven (2005)</option>
                         <option value="the-low-end-theory">The Low End Theory</option>
                         <option value="day-breaks">Day Breaks</option>
-                	</select>
+                    </select>
                     <label>Genre:</label><br>
                     <div id="genre-box">
                         <span>
@@ -55,38 +77,38 @@
                         </span>
                     </div>
                     <button type="button">Filter</button>
-                </aside>
+                </div>
 
-            <article id="songs">
-                <h2 class="songTitle">Song Name</h2>
+                <div class="col-md-8" id="songs">
+                    <h2 class="songTitle">Song Name</h2>
                     <p class="artist">Artist Name</p>
                     <p class="album">Album Name</p>
                     <p class="genre">Genre</p>
-                <h2 class="songTitle">Song Name</h2>
+                    <h2 class="songTitle">Song Name</h2>
                     <p class="artist">Artist Name</p>
                     <p class="album">Album Name</p>
                     <p class="genre">Genre</p>
-                <h2 class="songTitle">Song Name</h2>
+                    <h2 class="songTitle">Song Name</h2>
                     <p class="artist">Artist Name</p>
                     <p class="album">Album Name</p>
                     <p class="genre">Genre</p>
-                <h2 class="songTitle">Song Name</h2>
+                    <h2 class="songTitle">Song Name</h2>
                     <p class="artist">Artist Name</p>
                     <p class="album">Album Name</p>
                     <p class="genre">Genre</p>
-                <h2 class="songTitle">Song Name</h2>
+                    <h2 class="songTitle">Song Name</h2>
                     <p class="artist">Artist Name</p>
                     <p class="album">Album Name</p>
                     <p class="genre">Genre</p>
-                <h2 class="songTitle">Song Name</h2>
+                    <h2 class="songTitle">Song Name</h2>
                     <p class="artist">Artist Name</p>
                     <p class="album">Album Name</p>
                     <p class="genre">Genre</p>
-                <h2 class="songTitle">Song Name</h2>
+                    <h2 class="songTitle">Song Name</h2>
                     <p class="artist">Artist Name</p>
                     <p class="album">Album Name</p>
                     <p class="genre">Genre</p>
-            </article>
+                </div>
             </div>
         </div>
 

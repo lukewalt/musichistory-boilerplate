@@ -4,32 +4,34 @@
     <head>
         <meta charset="utf-8">
         <title>Music History</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,900" rel="stylesheet">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
 
-    <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top">
 
-        <div class="nav-element col-sm-1">
-            <a class="nav-btn nav-link" href="index.html" id="home">View Music</a>
-        </div>
+            <div class="nav-element col-sm-1">
+                <a class="nav-btn nav-link" href="index.html" id="home">View Music</a>
+            </div>
 
-        <div class="nav-element col-sm-1">
-            <a class="nav-btn nav-link" href="addmusic.html" id="new-movies">Add Music</a>
-        </div>
+            <div class="nav-element col-sm-1">
+                <a class="nav-btn nav-link" href="addmusic.html" id="new-movies">Add Music</a>
+            </div>
 
-        <div class=" nav-element navbar-right col-sm-1">
-            <a class="nav-btn register" href="#" data-toggle="modal" data-target="#myModal" data-whatever="register">
-                Register</a>
+            <div class=" nav-element navbar-right col-sm-1">
+                <a class="nav-btn register" href="#" data-toggle="modal" data-target="#myModal" data-whatever="register">
+                    Register
+                </a>
                 <a class="nav-btn logout navBtn" href="#">
                     Logout
                 </a>
             </div>
             <div class=" nav-element navbar-right col-sm-1">
-                <a class="nav-btn login" href="#"data-toggle="modal" data-target="#myModal" data-whatever="login">
-                    Login
-                </a>
+                    <a class="nav-btn login" href="#"data-toggle="modal" data-target="#myModal" data-whatever="login">
+                        Login
+                    </a>
             </div>
 
         </nav>
@@ -76,7 +78,7 @@
                             <input type="checkbox" id="rock" value="genre-rock" name="genre"><label for="rock">Rock</label>
                         </span>
                     </div>
-                    <button type="button">Filter</button>
+                    <button type="button" class="filterButton">Filter</button>
                 </div>
 
                 <div class="col-md-9" id="songs">

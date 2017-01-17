@@ -13,11 +13,11 @@
         <nav class="navbar navbar-default navbar-static-top">
 
             <div class="nav-element col-sm-1">
-                <a class="nav-btn nav-link" href="index.html" id="home">View Music</a>
+                <a class="nav-btn nav-link" href="#" id="main-nav">View Music</a>
             </div>
 
             <div class="nav-element col-sm-1">
-                <a class="nav-btn nav-link" href="addmusic.html" id="new-movies">Add Music</a>
+                <a class="nav-btn nav-link" href="#" id="add-nav">Add Music</a>
             </div>
 
             <div class=" nav-element navbar-right col-sm-1">
@@ -35,8 +35,8 @@
             </div>
 
         </nav>
-        <div class="container">
 
+        <div class="container view-music">
 
             <!-- <div class="container"> -->
             <div class="row">
@@ -113,6 +113,30 @@
                 </div>
             </div>
         </div>
+
+        <div class="container add-music hide">
+
+            <div class="entry-field">
+                <div class="search-box">
+                    <label for="song-name" class="searchLabel">Name</label>
+                    <input type="text" id="song-name" name="song" class="userInput">
+                </div>
+                <div class="search-box">
+                    <label for="artist" class="searchLabel">Artist</label>
+                    <input type="text" id="artist" name="artist" class="userInput">
+                </div>
+                <div class="search-box">
+                    <label for="album" class="searchLabel">Album</label>
+                    <input type="text" id="album" name="album" class="userInput">
+                </div>
+            </div>
+            <div id="add-sect">
+                <button type="button" id="add-music">Add</button>
+            </div>
+
+        </div>
+
+
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="songs.js"></script>
     </body>

@@ -81,3 +81,14 @@ var display = function() {
 }
 
 display()
+
+$('#add-nav').click(function(){
+    $('.view-music').addClass('hide');
+    $('.add-music').removeClass('hide');
+})
+
+$('#main-nav').click(function(){
+    $('.view-music').removeClass('hide');
+    $('.add-music').addClass('hide');
+
+})

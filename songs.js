@@ -95,6 +95,23 @@ function display() {
 
 populateArray()
 
+var viewMusicNav = document.getElementById('add-nav');
+var addMusicNav = document.getElementById("add-nav");
+
+var mainView = document.getElementById("mainView")
+var addMusic = document.getElementById("addMusic")
+
+viewMusicNav.addEventListener("click", function(){
+    mainView.className = " container view-music"
+    addMusic.className += "hide"
+
+})
+
+addMusic.addEventListener("click", function(){
+    mainView.className += " hide"
+    addMusic.className = "container add-music"
+})
+
 $('#add-nav').click(function(){
     $('.view-music').addClass('hide');
     $('.add-music').removeClass('hide');
@@ -103,5 +120,11 @@ $('#add-nav').click(function(){
 $('#main-nav').click(function(){
     $('.view-music').removeClass('hide');
     $('.add-music').addClass('hide');
+
+})
+
+
+$('#add-music').click(function(){
+
 
 })

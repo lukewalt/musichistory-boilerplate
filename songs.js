@@ -1,8 +1,59 @@
 
-
-
 var songs = [];
 var cleanedArray = [];
+//
+// function populateArray() {
+//
+//     songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
+//     songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
+//     songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
+//     songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
+//     songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
+//
+//     // placed a new song at the beginning and end of the starter array
+//     songs.unshift("Buffalo > by Toro y Mio on the album What For?");
+//     songs.unshift("A Walk > by Tycho on the album Dive");
+//     // console.log(songs);
+//
+//     //added missing genres
+//     for (var i = 0; i < 1; i++) {
+//         songs[0] += " - Alt";
+//         songs[1] += " - Rock"
+//         songs[2] += " - Elctr"
+//         songs[3] += " - Rock"
+//         songs[4] += " - Rock"
+//         songs[5] += " - Rock"
+//         songs[6] += " - Elctr"
+//     }
+//     regexArray();
+// }
+//
+//
+// //removed unwanted characters from each array
+// function regexArray(){
+//     for(var i = songs.length -1; i >= 0 ; i--){
+//         cleanedArray[i] = songs[i].replace(/@/, "").replace(/[*]/, "").replace(/>/, "-").replace(/!/, "").replace(/[(]/, "").replace("by ", "").replace("on the album", "-");
+//     }
+//     console.log("Cleaned Array  ", cleanedArray);
+//     populateObj()
+// }
+
+var globalData;
+
+var songsJSON = new XMLHttpRequest();
+songsJSON.addEventListener("load", getSongs);
+songsJSON.open("GET", "songs.json");
+songsJSON.send();
+
+
+
+function getSongs(e) {
+    //sets song data to global variable
+    globalData = JSON.parse(e.target.responseText);
+    populateObj(globalData)
+
+}
+
 
 
 //created empty object to store new values in the form of arrays
@@ -22,46 +73,9 @@ var albumDisplay = document.getElementsByClassName('album');
 var genreDisplay = document.getElementsByClassName('genre');
 
 
-function populateArray() {
+function populateObj(globalData) {
 
-    songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-    songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-    songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-    songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-    songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
-
-    // placed a new song at the beginning and end of the starter array
-    songs.unshift("Buffalo > by Toro y Mio on the album What For?");
-    songs.unshift("A Walk > by Tycho on the album Dive");
-    // console.log(songs);
-
-    //added missing genres
-    for (var i = 0; i < 1; i++) {
-        songs[0] += " - Alt";
-        songs[1] += " - Rock"
-        songs[2] += " - Elctr"
-        songs[3] += " - Rock"
-        songs[4] += " - Rock"
-        songs[5] += " - Rock"
-        songs[6] += " - Elctr"
-    }
-    regexArray();
-}
-
-
-//removed unwanted characters from each array
-function regexArray(){
-    for(var i = songs.length -1; i >= 0 ; i--){
-        cleanedArray[i] = songs[i].replace(/@/, "").replace(/[*]/, "").replace(/>/, "-").replace(/!/, "").replace(/[(]/, "").replace("by ", "").replace("on the album", "-");
-    }
-    console.log("Cleaned Array  ", cleanedArray);
-    populateObj()
-}
-
-function populateObj() {
-
-    for (var i = 0; i < cleanedArray.length; i++) {
-        var songInfoSplit = cleanedArray[i].split("-");
+    for (var i = 0; i < globalData.songs.length; i++) {
         // taking split items and pushing them to arrays in library object
         library.songs.push(songInfoSplit[0]);
         library.artist.push(songInfoSplit[1]);

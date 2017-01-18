@@ -1,0 +1,46 @@
+{
+  "songs": [
+    {
+      "songs": "Legs",
+      "artist": "ZZ Top",
+      "album": "Eliminator",
+      "genre": "Rock"
+    },
+    {
+      "songs": "The Logical Song",
+      "artist": "Supertramp",
+      "album": "Breakfast",
+      "genre": "Rock"
+    },
+    {
+      "songs": "Another Brick in the Wall",
+      "artist": "Pink Floyd",
+      "album": "The Wall",
+      "genre": "Rock"
+    },
+    {
+      "songs": "Welcome to the Jungle",
+      "artist": "Guns & Roses",
+      "album": "Appetite for Destruction",
+      "genre": "Rock"
+    },
+    {
+      "songs": "Ironic",
+      "artist": "Lava lamp",
+      "album": "Alanis Morisette",
+      "genre": "Jagged Little Pill"
+    },
+    {
+      "songs": "Buffalo",
+      "artist": "Toro y Mio",
+      "album": "What For?",
+      "genre": "Alt"
+    },
+    {
+      "songs": "A Walk",
+      "artist": "Tycho",
+      "album": "Dive",
+      "genre": "Elctr"
+    }
+  ]
+}

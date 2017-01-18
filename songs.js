@@ -95,7 +95,7 @@ function display() {
 
 populateArray()
 
-var viewMusicNav = document.getElementById('add-nav');
+var viewMusicNav = document.getElementById('main-nav');
 var addMusicNav = document.getElementById("add-nav");
 
 var mainView = document.getElementById("mainView")
@@ -103,28 +103,54 @@ var addMusic = document.getElementById("addMusic")
 
 viewMusicNav.addEventListener("click", function(){
     mainView.className = " container view-music"
-    addMusic.className += "hide"
-
+    addMusic.className += " hide"
 })
 
-addMusic.addEventListener("click", function(){
+addMusicNav.addEventListener("click", function(){
     mainView.className += " hide"
-    addMusic.className = "container add-music"
-})
-
-$('#add-nav').click(function(){
-    $('.view-music').addClass('hide');
-    $('.add-music').removeClass('hide');
-})
-
-$('#main-nav').click(function(){
-    $('.view-music').removeClass('hide');
-    $('.add-music').addClass('hide');
-
+    addMusic.className = " container add-music"
 })
 
 
-$('#add-music').click(function(){
+var userInputSong = document.getElementById("song-name")
+var userInputArtist = document.getElementById("artist")
+var userInputAlbum = document.getElementById("album")
 
 
-})
+// function() {
+//
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $('#add-nav').click(function(){
+//     $('.view-music').addClass('hide');
+//     $('.add-music').removeClass('hide');
+// })
+//
+// $('#main-nav').click(function(){
+//     $('.view-music').removeClass('hide');
+//     $('.add-music').addClass('hide');
+//
+// })
+//
+//
+// $('#add-music').click(function(){
+//
+//
+// })

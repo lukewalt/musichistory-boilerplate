@@ -139,3 +139,9 @@ a:hover {
 input {
     color: black;
 }
+
+.delete-song {
+    color: purple;
+    border-radius: 5px;
+    background-color: white;
+}

@@ -32,7 +32,7 @@ function populateArray() {
 
     // placed a new song at the beginning and end of the starter array
     songs.unshift("Buffalo > by Toro y Mio on the album What For?");
-    songs.push("A Walk > by Tycho on the album Dive");
+    songs.unshift("A Walk > by Tycho on the album Dive");
     // console.log(songs);
 
     //added missing genres
@@ -129,11 +129,17 @@ function getUserSearch() {
     library.songs.unshift(userInputSong.value);
     library.artist.unshift(userInputArtist.value);
     library.album.unshift(userInputAlbum.value);
-    console.log(library);
+    alert("Added song "+ userInputSong.value + " by " + userInputArtist.value + " to Library")
+    clearInputField()
     display();
+    console.log(library);
 }
 
-
+function clearInputField() {
+    userInputSong.value = "";
+    userInputArtist.value = "";
+    userInputAlbum.value = "";
+}
 
 
 

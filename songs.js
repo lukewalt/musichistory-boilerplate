@@ -72,28 +72,28 @@ function populateObj() {
     display()
 }
 
+
+var songsDisplayed = document.getElementById("songs")
+
 function display() {
     //looping throught the arrays stored as object values and setting them equal to the counter indexing each node in the Node list
-    for (var j = 0; j < library.songs.length; j++) {
-        console.log(songTitle[j]);
-        songTitle[j].innerHTML = library.songs[j];
+    var appendedSongs = "";
+    console.log(library.artist);
+    for (var i = 0; i < library.songs.length; i++) {
+        appendedSongs += `<div class="indvSong">
+                            <h2 class="songTitle">${library.songs[i]}</h2>
+                            <p class="artist">${library.artist[i]}</p>
+                            <p class="album">${library.album[i]}</p>
+                            <p class="genre">${library.genre[i]}</p>
+                           </div>`
     }
-    for (var j = 0; j < library.artist.length; j++) {
-        console.log(artistDisplay[j])
-        artistDisplay[j].innerHTML = library.artist[j];
-    }
-    for (var j = 0; j < library.album.length; j++) {
-        console.log(albumDisplay[j])
-        albumDisplay[j].innerHTML = library.album[j];
-    }
-    for (var j = 0; j < library.genre.length; j++) {
-        console.log(genreDisplay[j])
-        genreDisplay[j].innerHTML = library.genre[j];
-    }
+
+    songsDisplayed.innerHTML = appendedSongs
 
 }
 
 populateArray()
+addMusicButton()
 
 var viewMusicNav = document.getElementById('main-nav');
 var addMusicNav = document.getElementById("add-nav");
@@ -108,21 +108,30 @@ viewMusicNav.addEventListener("click", function(){
 
 addMusicNav.addEventListener("click", function(){
     mainView.className += " hide"
-    addMusic.className = " container add-music"
+    addMusic.className = " container add-music-sect"
 })
 
 
-var userInputSong = document.getElementById("song-name")
-var userInputArtist = document.getElementById("artist")
-var userInputAlbum = document.getElementById("album")
+var userInputSong = document.getElementById("addSong")
+var userInputArtist = document.getElementById("addArtist")
+var userInputAlbum = document.getElementById("addAlbum")
 
 
-// function() {
-//
-// }
+//get user input from search fields
+function addMusicButton() {
+    var addMusicButton = document.getElementById("add-music")
+    addMusicButton.addEventListener("click", function(){
+        getUserSearch()
+    })
+}
 
-
-
+function getUserSearch() {
+    library.songs.unshift(userInputSong.value);
+    library.artist.unshift(userInputArtist.value);
+    library.album.unshift(userInputAlbum.value);
+    console.log(library);
+    display();
+}
 
 
 
@@ -140,12 +149,12 @@ var userInputAlbum = document.getElementById("album")
 
 // $('#add-nav').click(function(){
 //     $('.view-music').addClass('hide');
-//     $('.add-music').removeClass('hide');
+//     $('.add-music-sect-sect').removeClass('hide');
 // })
 //
 // $('#main-nav').click(function(){
 //     $('.view-music').removeClass('hide');
-//     $('.add-music').addClass('hide');
+//     $('.add-music-sect').addClass('hide');
 //
 // })
 //

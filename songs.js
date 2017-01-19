@@ -5,8 +5,6 @@ var library = {
     album: [],
     genre: []
 };
-console.log("Library  ", library);
-
 
 //capture elements from the DOM in the form of a NODE List
 var songTitle = document.getElementsByClassName('songTitle');
@@ -22,15 +20,12 @@ songsJSON.addEventListener("load", getSongs);
 songsJSON.open("GET", "songs.json");
 songsJSON.send();
 
-
-
 function getSongs(e) {
     //sets song data to global variable
     globalData = JSON.parse(e.target.responseText);
+    console.log("global data", globalData);
     populateObj(globalData)
-
 }
-
 
 function populateObj(globalData) {
     for (var i = 0; i < globalData.songs.length; i++) {
@@ -44,28 +39,28 @@ function populateObj(globalData) {
     display();
 }
 
-
 var songsDisplayed = document.getElementById("songs")
 
 function display() {
     //looping throught the arrays stored as object values and setting them equal to the counter indexing each node in the Node list
     var appendedSongs = "";
-    console.log(library.songs);
     for (var i = 0; i < library.songs.length; i++) {
-        appendedSongs += `<div class="indvSong">
-                            <h2 class="songTitle">${library.songs[i]}</h2>
-                            <p class="artist">${library.artist[i]}</p>
-                            <p class="album">${library.album[i]}</p>
-                            <p class="genre">${library.genre[i]}</p>
-                            <button type="button" name="button" class="delete-song">Delete</button>
+        appendedSongs += `<div class="indvSong row">
+                                <h3 class="songTitle col-md-12">${library.songs[i]}</h3>
+                                    <p class="artist col-md-4">${library.artist[i]}</p>
+                                    <p class="album col-md-4">${library.album[i]}</p>
+                                    <p class="genre col-md-4">${library.genre[i]}</p>
+                                <button type="button" name="button" class="btn">Delete</button>
                            </div>`
     }
 
-    songsDisplayed.innerHTML = appendedSongs
+    songsDisplayed.innerHTML = appendedSongs + `<button type="button" name="button" id="moreSongs" class="btn more-songs-btn">More Songs</button>`
     deleteSongs();
+
+    var moreSongs = document.getElementById("moreSongs")
+    loadMoreEventListener();
 }
 
-addMusicButton()
 
 var viewMusicNav = document.getElementById('main-nav');
 var addMusicNav = document.getElementById("add-nav");
@@ -96,6 +91,7 @@ function addMusicButton() {
         getUserSearch()
     })
 }
+addMusicButton()
 
 function getUserSearch() {
     library.songs.unshift(userInputSong.value);
@@ -124,22 +120,24 @@ function removal(e){
     e.target.parentNode.remove();
 }
 
+//------------- Second XML Request Load More Songs --------
 
+function loadMoreEventListener() {
+    console.log("hey");
+    moreSongs.addEventListener("click", fetchMoreSongs)
+}
 
+function fetchMoreSongs() {
+    var goAgain = new XMLHttpRequest();
+    goAgain.addEventListener("load", getSongs);
+    goAgain.open("GET", "songs.json");
+    goAgain.send();
+}
 
-// $('#add-nav').click(function(){
-//     $('.view-music').addClass('hide');
-//     $('.add-music-sect-sect').removeClass('hide');
-// })
-//
-// $('#main-nav').click(function(){
-//     $('.view-music').removeClass('hide');
-//     $('.add-music-sect').addClass('hide');
-//
-// })
-//
-//
-// $('#add-music').click(function(){
-//
-//
-// })
+var secondData;
+
+function getMoreSongs(e){
+    secondData = JSON.parse(e.target.responseText);
+    globalData += secondData
+    populateObj(globalData);
+}

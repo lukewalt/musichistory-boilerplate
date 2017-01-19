@@ -76,18 +76,23 @@ a:hover {
     background-color: #4d3667;
     border: 2px solid gold;
     text-align: left;
-    padding: 4% 2% 5% 4%;
+    padding: 4% 2% 5% 6%;
 
 }
 
 #songs > p {
   display: inline;
-  padding: 0 4% 0 4%;
+  padding: 0;
 }
 
 
 .songTitle {
-  margin: 2% 4% 3%;
+  margin: 0 0 3%;
+  padding: 0;
+}
+
+.indvSong {
+    margin: 3% 0;
 }
 
 
@@ -140,8 +145,15 @@ input {
     color: black;
 }
 
-.delete-song {
+.btn {
     color: purple;
     border-radius: 5px;
     background-color: white;
+}
+
+
+.more-songs-btn {
+    width: 50%;
+    margin: 0 21%;
+
 }
